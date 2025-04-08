@@ -1,0 +1,526 @@
+/* Global styles */
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Text color */
+    background-color: #f5f5f5; /* Background color */
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+h1{
+    font-size: 36px;
+    line-height: 1;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+h2{
+    font-size: 28px;
+    color: #00274C; /* UM Blue */
+    line-height: 1.2;
+}
+
+h3{
+    font-size: 20px;
+    color: #00274C; /* UM Blue */
+    line-height: 1.2;
+    padding: 12px 0px 0px 0px;
+}
+
+main div:not(:first-child) {
+    padding: 0px 20px 20px 20px;
+}
+
+.list ul{
+    padding-left: 20px;
+}
+
+.list ul li{
+    padding-top: 4px;
+}
+
+
+/* Parallax effect for overview */
+.overview {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url("../images/UMSI_Fallcampus.jpeg") no-repeat center;
+    background-size: cover;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    height: 320px;
+    grid-column: 1 / -1;
+    padding: 40px;
+}
+
+.overview h1 {
+    padding: 50px 0px;
+}
+
+/* Skip to Main Content */
+.skip {
+    position: absolute;
+    top: -40px;
+}
+.skip a{
+    color: #00274C;
+    width: fit-content;
+    font-weight: bold;
+    background-color: #FFCB05;
+    text-align: center;
+}
+.skip a:focus {
+    top: 30px;
+    position: absolute;
+    padding:20px;
+    margin: 20px;
+}
+
+/* Header */
+header {
+    background: #00274C; /* UM Blue */
+    color: #FFCB05;
+    text-align: center;
+}
+
+header img{
+    width: 90%;
+    max-width: 600px;
+    max-height: 150px; /* Ensures proper scaling */
+    object-fit: cover; /* Prevents distortion */
+    padding: 20px 20px 8px 20px;
+}
+
+header h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Navigation */
+nav {
+    background: white; /* UM Maize */
+    width: 100%;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
+}
+nav ul li {
+    flex-grow: 1;
+    text-align: center;
+}
+nav ul li a {
+    color: #00274C; /* UM Blue */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    border-bottom: 4px solid transparent; /* 공간 확보 */
+}
+nav ul li a:hover, nav ul li a:focus {
+    background: #FFCB05;
+    color: #00274C;
+}
+nav ul li a.active {
+    color: 	white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #2F65A7;
+    border-bottom: 4px solid white;
+}
+
+/* Responsive Grid Layout */
+.container {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Image Styles */
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #00274C; /* UM Blue */
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+footer a {
+    color: #FFCB05; /* UM Maize */
+    text-decoration: underline;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Accessibility & Interactive Elements */
+a {
+    transition: 0.3s;
+}
+a:focus-visible {
+    outline: 3px dashed #FFCB05;
+}
+
+/* Buttons */
+button {
+    background: #FFCB05; /* UM Maize */
+    color: #00274C; /* UM Blue */
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover, button:focus {
+    background: #00274C; /* UM Blue */
+    color: white;
+}
+
+/* Container for the articles */
+.physical_card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 12px; /* Rounded corners */
+    text-align: left; /* Ensures content is left-aligned */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 16px;
+    padding: 16px;
+    max-width: 400px;
+}
+
+/* Center the title */
+.physical_card h3 {
+    text-align: center;
+}
+
+/* Style the image */
+.physical_card img {
+    width: 100%; /* Makes image fill the card */
+    border-radius: 8px; /* Rounds the corners */
+    margin: 10px 0; /* Adds spacing above and below */
+}
+
+
+/*Study HTML*/
+.overview_study {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url("../images/study_05.jpg") no-repeat center;
+    background-size: cover;
+    background-size: cover;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    height: 320px;
+    grid-column: 1 / -1;
+    padding: 40px;
+}
+
+.study_spots ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 12px; /* Space between cards */
+    list-style: none;
+}
+
+.study_spots li {
+    background: white;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.image_box{
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 1 / 1; /* 1:1 square images */
+    object-fit: cover; /* Crop images to fit */
+    border-radius: 12px; /* Rounded top corners */
+}
+
+.image_box img {
+    width: 100%; /* Ensures it fills the container width */
+    height: 100%; /* Forces image to fill the container height */
+    object-fit: cover; /* Ensures the image covers the box without distortion */
+}
+
+.study_spots img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+}
+
+.study_spots a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #00274C; /* U-M Blue */
+}
+
+
+
+
+/*Tutoring HTML*/
+.overview_tutoring {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url("../images/study_07.jpg") no-repeat center;
+    background-size: cover;
+    background-size: cover;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    height: 320px;
+    grid-column: 1 / -1;
+    padding: 40px;
+}
+
+/*Food HTML*/
+.overview_food {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url("../images/food_03.jpg") no-repeat center;
+    background-size: cover;
+    background-size: cover;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    height: 320px;
+    grid-column: 1 / -1;
+    padding: 40px;
+}
+
+.video iframe {
+    width: 100%; /* Full width of the parent container */
+    max-width: 800px;
+    aspect-ratio: 16 / 9; /* Maintain original YouTube aspect ratio */
+    height: auto; /* Auto-adjust height based on aspect ratio */
+    display: block; /* Prevents unwanted spacing */
+}
+
+.list-header {
+    display: grid;
+    grid-template-columns: auto min-content;
+    align-items: center; /* Vertically aligns text and icon */
+    justify-content: left; /* Ensures text is left-aligned, icon is right-aligned */
+    white-space: nowrap; /* Prevents text from wrapping */
+    padding: 0 !important;
+    margin: 10px 0px 0px 0px !important;
+}
+.list-header img {
+    height: 1.8em; /* Makes the icon match the height of h2 */
+    object-fit: contain; /* Ensures the image is not distorted */
+    padding: 0px 8px 0px 0px;
+}
+.list-header h3{
+    padding: 0px !important;
+}
+
+.service_info{
+    padding: 0px 0px 10px 36px !important;
+}
+
+
+
+@media screen and (min-width: 600px) {
+    main {
+        padding-bottom: 40px;
+    }
+    main div:not(:first-child) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .study_spots ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 2 columns */
+        gap: 12px; /* Space between cards */
+        list-style: none;
+    }
+
+    .physical_card {
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border-radius: 12px; /* Rounded corners */
+        text-align: center; /* Ensures content is left-aligned */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        margin: 16px;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+}
+
+footer {
+    background-color: #00274C;
+    color: white;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section {
+    text-align: left;
+  }
+  
+  .footer-subscribe {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .footer-subscribe input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .footer-subscribe button {
+    background-color: #FFCB05;
+    color: #00274C;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: not-allowed;
+  }
+  
+  .footer-subscribe button.active {
+    cursor: pointer;
+  }
+  
+  .footer-bottom {
+    text-align: left;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #ccc;
+  }
+
+footer h2 {
+    color:  #FFCB05;
+    margin-bottom: 20px;
+    text-align: left;
+}
+  
+  .footer-bottom {
+    text-align: center;
+}
+
+#subscribe-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+#subscribe-email,
+#subscribe-button {
+    padding: 10px 16px;
+    font-size: 16px;
+    height: 44px;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+}
+  
+#subscribe-email {
+    flex: 1;
+    border: 1px solid #ccc;
+}
+  
+#subscribe-button {
+    background-color: #ccc; /* 비활성화일 때 회색 */
+    color: #00274C; /* UMich Blue 텍스트 */
+    font-weight: bold;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+}
+  
+#subscribe-button.active {
+    background-color: #FFCB05; /* 노란색 */
+    color: #00274C;
+    cursor: pointer;
+}
+  
+#subscribe-button.active:hover {
+    background-color: #2F65A7; /* 하늘색 */
+    color: #FFCB05;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+    .footer-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .footer-section {
+        flex: 1;
+        text-align: left;
+    }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .physical_health {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .physical_card {
+        flex: 1 1 45%;
+        max-width: 40%;
+    }
+
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }     
+}
